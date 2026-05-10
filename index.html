@@ -17,6 +17,9 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="images/otunba-gbenga-lasore-portrait.jpg">
 </head>
 <body>
     <!-- Navbar -->
@@ -27,6 +30,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#ventures">Ventures</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#public-service">Public Service</a></li>
                 <li><a href="#contact" class="btn-primary-small">Get in Touch</a></li>
             </ul>
@@ -55,8 +59,7 @@
             <div class="about-grid">
                 <div class="about-image-wrapper reveal-left">
                     <div class="about-image">
-                        <!-- Placeholder for portrait. The user will provide an image later -->
-                        <div class="placeholder-portrait"><i class="fas fa-user-tie"></i></div>
+                        <img src="images/otunba-gbenga-lasore-portrait.jpg" alt="Otunba Gbenga Lasore Portrait" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="accent-frame"></div>
                 </div>
@@ -156,7 +159,29 @@
         </div>
     </section>
 
-    <!-- Section 5: Public Service & Leadership -->
+    <!-- Section 5: Gallery -->
+    <section class="gallery section bg-light" id="gallery">
+        <div class="container">
+            <div class="section-header text-center reveal-up">
+                <h2 class="section-heading">Media Gallery</h2>
+                <p class="section-subtext">Moments captured from the life and times of Otunba Gbenga Lasore.</p>
+            </div>
+            <div class="gallery-grid">
+                <img src="images/otunba-gbenga-lasore-1.jpg" alt="Otunba Gbenga Lasore at event 1" class="gallery-img reveal-up" loading="lazy">
+                <img src="images/otunba-gbenga-lasore-2.jpg" alt="Otunba Gbenga Lasore at event 2" class="gallery-img reveal-up" loading="lazy">
+                <img src="images/otunba-gbenga-lasore-3.jpg" alt="Otunba Gbenga Lasore at event 3" class="gallery-img reveal-up" loading="lazy">
+                <img src="images/otunba-gbenga-lasore-4.jpg" alt="Otunba Gbenga Lasore at event 4" class="gallery-img reveal-up" loading="lazy">
+                <img src="images/otunba-gbenga-lasore-5.jpg" alt="Otunba Gbenga Lasore at event 5" class="gallery-img reveal-up" loading="lazy">
+                <img src="images/otunba-gbenga-lasore-6.jpg" alt="Otunba Gbenga Lasore at event 6" class="gallery-img reveal-up" loading="lazy">
+                <img src="images/otunba-gbenga-lasore-7.jpg" alt="Otunba Gbenga Lasore at event 7" class="gallery-img reveal-up" loading="lazy">
+                <img src="images/otunba-gbenga-lasore-8.jpg" alt="Otunba Gbenga Lasore at event 8" class="gallery-img reveal-up" loading="lazy">
+                <img src="images/otunba-gbenga-lasore-9.jpg" alt="Otunba Gbenga Lasore at event 9" class="gallery-img reveal-up" loading="lazy">
+                <img src="images/otunba-gbenga-lasore-10.jpg" alt="Otunba Gbenga Lasore at event 10" class="gallery-img reveal-up" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Public Service & Leadership -->
     <section class="public-service section parallax" id="public-service">
         <div class="parallax-overlay"></div>
         <div class="container reveal-up relative z-10 text-center">
@@ -180,7 +205,7 @@
                 </div>
                 
                 <div class="footer-form reveal-right">
-                    <form class="contact-form" onsubmit="sendToWhatsApp(event)">
+                    <form class="contact-form" onsubmit="sendEmail(event)">
                         <div class="form-group">
                             <input type="text" id="senderName" placeholder="Your Name" required>
                         </div>

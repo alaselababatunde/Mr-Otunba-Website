@@ -64,8 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// WhatsApp Integration
-function sendToWhatsApp(event) {
+// Email Integration
+function sendEmail(event) {
     event.preventDefault();
 
     const name = encodeURIComponent(document.getElementById('senderName').value);
@@ -74,15 +74,12 @@ function sendToWhatsApp(event) {
     const subject = encodeURIComponent(document.getElementById('senderSubject').value);
     const message = encodeURIComponent(document.getElementById('senderMessage').value);
 
-    // Target WhatsApp Number
-    const phoneNumber = "234811922402";
-
-    // Formatted Message Text
-    const text = `Hello, my name is ${name}.%0A%0A*Email:* ${email}%0A*WhatsApp:* ${whatsapp}%0A*Subject:* ${subject}%0A%0A*Message:*%0A${message}`;
+    // Formatted Body Text
+    const body = `Name: ${decodeURIComponent(name)}%0AEmail: ${decodeURIComponent(email)}%0AWhatsApp: ${decodeURIComponent(whatsapp)}%0A%0A${decodeURIComponent(message)}`;
     
-    // WhatsApp API URL
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${text}`;
+    // Mailto URL
+    const mailtoUrl = `mailto:gbengalasore@gmail.com?subject=${subject}&body=${body}`;
     
-    // Open WhatsApp in a new tab
-    window.open(whatsappUrl, '_blank');
+    // Open Email Client
+    window.location.href = mailtoUrl;
 }
