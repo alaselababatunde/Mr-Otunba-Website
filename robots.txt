@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mr-otunba-website.vercel.app/sitemap.xml
+Sitemap: https://gbengalasore.vercel.app/sitemap.xml
