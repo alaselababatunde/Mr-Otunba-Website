@@ -63,3 +63,26 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 });
+
+// WhatsApp Integration
+function sendToWhatsApp(event) {
+    event.preventDefault();
+
+    const name = encodeURIComponent(document.getElementById('senderName').value);
+    const email = encodeURIComponent(document.getElementById('senderEmail').value);
+    const whatsapp = encodeURIComponent(document.getElementById('senderWhatsapp').value);
+    const subject = encodeURIComponent(document.getElementById('senderSubject').value);
+    const message = encodeURIComponent(document.getElementById('senderMessage').value);
+
+    // Target WhatsApp Number
+    const phoneNumber = "234811922402";
+
+    // Formatted Message Text
+    const text = `Hello, my name is ${name}.%0A%0A*Email:* ${email}%0A*WhatsApp:* ${whatsapp}%0A*Subject:* ${subject}%0A%0A*Message:*%0A${message}`;
+    
+    // WhatsApp API URL
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${text}`;
+    
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, '_blank');
+}
